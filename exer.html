@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercícios</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <script lang="JavaScript">
+
+    function go()
+    {
+
+        /*variáveis*/
+
+            var s, i, contc, contv, conte, sc, lim, fim, ini, aux, s1, x4;
+
+        /*exer3*/
+
+            s = document.frm.txt.value;
+
+            contv = parseInt(0);
+            contc = parseInt(0);
+            conte = parseInt(0);
+            i = parseInt(0);
+            lim = parseInt(0);
+            fim = parseInt(0);
+            ini = parseInt(0);
+            x4 = parseInt(1);
+
+
+            for(i = 0; i <= s.length; i++)
+            {
+                sc = s.charCodeAt(i);
+
+                if(((sc == 97) || (sc == 101) || (sc == 105) || (sc == 111) || (sc == 117)) || ((sc == 65) || (sc == 69) || (sc == 73) || (sc == 79) || (sc == 85)))
+                {
+                    contv++;
+                }
+            }
+
+            for(i = 0; i <= s.length; i++)
+            {
+                sc = s.charCodeAt(i);
+
+                if(((sc > 97) && (sc < 101) || (sc > 101) && (sc < 105) || (sc > 105) && (sc < 111) || (sc > 111) && (sc < 117)) || ((sc > 65) && (sc < 69) || (sc > 69) && (sc < 73) || (sc > 73) && (sc < 79) || (sc > 79) && (sc < 85)))
+                {
+                    contc++;
+                }
+            }
+
+            for(i = 0; i <= s.length; i++)
+            {
+                if( (s.charCodeAt(i) < 65) || (s.charCodeAt(i) > 90) && (s.charCodeAt(i) < 97) || (s.charCodeAt(i) > 122) )
+                {
+                    conte++;
+                }
+            }
+        
+
+        document.write("<table border='1'>");
+
+            document.write("<tr>");
+                document.write("<td>Qt. de vogais</td>");
+                document.write("<td>"+ contv +"</td>");
+            document.write("</tr>");
+
+            document.write("<tr>");
+                document.write("<td>Qt. de consoantes</td>");
+                document.write("<td>"+ contc +"</td>");
+            document.write("</tr>");
+
+            document.write("<tr>");
+                document.write("<td>Qt. de dígitos</td>");
+                document.write("<td>"+ s.length +"</td>");
+            document.write("</tr>");
+
+            document.write("<tr>");
+                document.write("<td>Qt. de teclas especias</td>");
+                document.write("<td>"+ conte +"</td>");
+            document.write("</tr>");
+
+        document.write("</table>");
+
+        /*exer4*/
+
+        lim = s.length / 2;
+        fim = s.length - 1;
+        ini = 0;
+        s1 = s;
+
+        for(i = 0; i <= lim; i++)
+        {
+
+            aux = s1.charAt(ini);
+            s1.charAt(ini) = s1.charAt(fim);
+            s1.charAt(fim) = aux;
+
+            ini++;
+            fim--;
+
+        }
+
+        for(i = 0; i <= s.length; i++)
+        {
+
+            if(s1.charAt(i) != s.charAt(i))
+            {
+                x4 = 0;
+            }
+
+        }
+
+        if(x4 == 1)
+        {
+            document.write("A palavra ou a frase é um palíndromo")
+        }
+        else
+        {
+            document.write("A palavra ou a frase não é um palíndromo")
+        }
+    }
+
+    </script>
+</head>
+<body>
+    
+    <form name="frm">
+        Digite aqui: <input type="text" name="txt" value="Digite qualquer coisa"><br>
+        <input type="button" value="OK" onclick="go();">
+    </form>
+
+</body>
+</html>
