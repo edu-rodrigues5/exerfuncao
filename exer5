@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercícios</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <script lang="JavaScript">
+
+    function go()
+    {
+
+        /*variáveis*/
+
+            var  i, limite, inicio, n, snome;
+
+        /*exer3*/
+
+            n = document.frm.a.value;
+            i = parseInt(0);
+            inicio = parseInt(0);
+
+        /*exer5*/
+
+        for(i = 0; i <= n.length; i++)
+        {
+
+            if(n.charCodeAt(i) == 32)
+            {
+                inicio = i;
+            }
+        }
+
+        snome = n.substring(inicio,n.length);
+
+        n = n.substring(0, inicio)
+
+        document.write("<p>" + snome +", " + n +"</p>");
+
+    }
+
+    </script>
+</head>
+<body>
+    
+    <form name="frm">
+        Digite seu Nome e sobrenome: <input type="text" name="a" value=""><br>
+        <input type="button" value="OK" onclick="go();">
+    </form>
+
+</body>
+</html>
