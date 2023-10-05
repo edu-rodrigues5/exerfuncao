@@ -40,12 +40,12 @@
             {
                 fim = i - 1;
 
-                x += s.substring(inicio, fim)
+                x += s.substring(inicio, fim);
 
                 inicio = fim + 2;
                 i++;
             }
-        }while(i <= sc)
+        }while(s != s.indexOf(" "))
 
         document.write("<p>"+x+"</p>")
 
@@ -81,7 +81,6 @@
     
     <form name="frm">
         Digite qualquer coisa: <input type="text" name="txt" value=""><br>
-        Digite seu Nome e sobrenome: <input type="text" name="a" value=""><br>
         <input type="button" value="OK" onclick="go();">
     </form>
 
