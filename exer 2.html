@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>exer2</title>
+    <script lang="JavaScript">
+    function ok()
+    {
+       var c,i,n;
+
+       c = document.digitar.cara.value;
+       n = document.digitar.num.value;
+       
+
+       
+       document.write("<table border= '1' width='200' height='40'> <tr>");
+        document.write("<td align='center'>");
+        for(i = 1; i <= n; ++i)
+        {
+       
+           document.write(c);
+       
+        }
+        document.write("</td>");
+        document.write("</tr></table>");
+
+    }
+
+    </script>
+</head>
+<body>
+    
+    <form name="digitar">
+     Digite um caracter = <input type= "text" name= "cara"><br>
+     <br>Digite uma quantidade de repetição = <input type= "number" name= "num"><br>
+     <br> <input type= "button" name= "botao" value= "ok" onclick="ok();">
+    </form>
+
+        
+    
+</body>
+</html>

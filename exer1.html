@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>exer1</title>
+    <script lang="JavaScript">
+    function ok()
+    {
+       var c,i;
+
+       c = document.digitar.cara.value;
+
+       
+
+         //VERTICAL
+
+         document.write("<table border='1' width='40' height='200'>");
+
+        for(i = 0; i <= c.length -1; ++i)
+        {
+
+            document.write("<tr><td align='center'>" + c.charAt(i) + "</td></tr><br>");
+
+        }
+
+        document.write("</table>");
+
+        //horizontal
+
+        document.write("<table border='1' width='200' height='40'><tr>");
+        
+        for(i = 0; i <= c.length -1; ++i)
+        {
+
+            document.write("<td align='center'>" + c.charAt(i) + "</td><br>");
+
+        }
+
+        document.write("</table></tr>");
+
+
+
+
+    }
+
+    </script>
+</head>
+<body>
+    
+    <form name="digitar">
+     <input type= "text" name= "cara"><br>
+     <input type= "button" name= "botao" value= "ok" onclick="ok();">
+    </form>
+
+        
+    
+</body>
+</html>

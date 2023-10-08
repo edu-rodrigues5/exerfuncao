@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>exer6</title>
+    <script lang="JavaScript">
+    function ok()
+    {
+       var c, quant , espuc , espc , sobre, esps, quant2, i;
+
+       c = document.digitar.cara.value;
+      
+      
+      quant = c.length;
+      espuc = c.lastIndexOf(" ");
+      espc = c.indexOf(" ");
+     
+      document.write("<table border= '1' width='200' height='40'> <tr>");
+        document.write("<td align='center'>");
+
+      document.write("<b>" + c.substring(espuc, quant) + ",</b>");
+
+      document.write( " " + c.substring(0 , espc));
+      
+      sobre = c.substring(espc , espuc);  
+
+      //segundo sobrenome
+
+      for(i = 0; i <= quant; i++) 
+      {
+        if(sobre.charAt(i) == " ")
+        {
+            document.write( " " + sobre.charAt(i + 1) + ". ");
+        }
+    
+      }
+      
+      document.write("</td>");
+        document.write("</tr></table>");
+      
+       
+
+    }
+
+    </script>
+</head>
+<body>
+    
+    <form name="digitar">
+     Digite seu nome completo = <input type= "text" name= "cara"><br>
+    
+     <br> <input type= "button" name= "botao" value= "ok" onclick="ok();">
+    </form>
+
+        
+    
+</body>
+</html>
